@@ -1,0 +1,7 @@
+[
+  { "slug": "informatica", "name": "Informatica" },
+  { "slug": "literatura", "name": "Literatura" },
+  { "slug": "matematicas", "name": "Matematicas" },
+  { "slug": "ciencia", "name": "Ciencia" },
+  { "slug": "historia", "name": "Historia" }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "u1",
+    "email": "demo@unir.net",
+    "name": "Estudiante Demo",
+    "purchasedBookIds": ["1", "3", "10"]
+  },
+  {
+    "id": "u2",
+    "email": "profesor@unir.net",
+    "name": "Profesor Demo",
+    "purchasedBookIds": ["7", "8"]
+  }
+]
