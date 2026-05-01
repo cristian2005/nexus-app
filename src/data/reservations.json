@@ -1,0 +1,42 @@
+[
+  {
+    "id": "r1",
+    "spaceId": "2",
+    "userId": "u1",
+    "userName": "Estudiante Demo",
+    "startTime": "2026-05-01T09:00:00",
+    "endTime": "2026-05-01T11:00:00"
+  },
+  {
+    "id": "r2",
+    "spaceId": "1",
+    "userId": "u2",
+    "userName": "Profesor Demo",
+    "startTime": "2026-05-01T14:00:00",
+    "endTime": "2026-05-01T16:00:00"
+  },
+  {
+    "id": "r3",
+    "spaceId": "5",
+    "userId": "u1",
+    "userName": "Estudiante Demo",
+    "startTime": "2026-05-01T10:00:00",
+    "endTime": "2026-05-01T12:00:00"
+  },
+  {
+    "id": "r4",
+    "spaceId": "3",
+    "userId": "u2",
+    "userName": "Profesor Demo",
+    "startTime": "2026-05-01T15:00:00",
+    "endTime": "2026-05-01T18:00:00"
+  },
+  {
+    "id": "r5",
+    "spaceId": "7",
+    "userId": "u1",
+    "userName": "Estudiante Demo",
+    "startTime": "2026-05-02T09:00:00",
+    "endTime": "2026-05-02T11:00:00"
+  }
+]

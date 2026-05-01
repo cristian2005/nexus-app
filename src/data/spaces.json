@@ -1,0 +1,66 @@
+[
+  {
+    "id": "1",
+    "name": "Sala Sócrates",
+    "capacity": 4,
+    "amenities": ["pizarra", "monitor", "wifi"],
+    "description": "Sala silenciosa con pizarra blanca ideal para reuniones pequeñas y sesiones de brainstorming.",
+    "image": "https://placehold.co/600x400/0f172a/ffffff?text=Sala+Socrates"
+  },
+  {
+    "id": "2",
+    "name": "Sala Platón",
+    "capacity": 6,
+    "amenities": ["proyector", "pizarra", "wifi", "aire"],
+    "description": "Espacio amplio con proyector para presentaciones y reuniones de equipo.",
+    "image": "https://placehold.co/600x400/1e3a5f/ffffff?text=Sala+Platon"
+  },
+  {
+    "id": "3",
+    "name": "Sala Aristóteles",
+    "capacity": 8,
+    "amenities": ["video-conferencia", "monitor", "wifi", "café"],
+    "description": "Sala grande equipada para video conferencias y eventos corporativos.",
+    "image": "https://placehold.co/600x400/2d4a6f/ffffff?text=Sala+Aristoteles"
+  },
+  {
+    "id": "4",
+    "name": "Desk Individual",
+    "capacity": 1,
+    "amenities": ["escritorio", "luz", "wifi", "enchufes"],
+    "description": "Puesto de trabajo individual silencioso para trabajo concentrado.",
+    "image": "https://placehold.co/600x400/3d5a7f/ffffff?text=Desk+Individual"
+  },
+  {
+    "id": "5",
+    "name": "Zona Colaborativa",
+    "capacity": 12,
+    "amenities": ["mesas modulares", "wifi", "pantallas", "café"],
+    "description": "Espacio abierto para trabajo en equipo y workshops colaborativos.",
+    "image": "https://placehold.co/600x400/4d6a8f/ffffff?text=Zona+Colaborativa"
+  },
+  {
+    "id": "6",
+    "name": "Sala Zen",
+    "capacity": 2,
+    "amenities": ["silencio", "wifi", "luz natural"],
+    "description": "Sala minimalista para entrevistas y reuniones privadas de baja ocupación.",
+    "image": "https://placehold.co/600x400/5d7a9f/ffffff?text=Sala+Zen"
+  },
+  {
+    "id": "7",
+    "name": "Sala Newton",
+    "capacity": 5,
+    "amenities": ["pizarra digital", "monitor", "wifi", "webcam"],
+    "description": "Sala técnica con pizarra digital para sesiones de formación y code reviews.",
+    "image": "https://placehold.co/600x400/6d8aaf/ffffff?text=Sala+Newton"
+  },
+  {
+    "id": "8",
+    "name": "Terraza Coworking",
+    "capacity": 6,
+    "amenities": ["aire libre", "wifi", "sombra", "bebidas"],
+    "description": "Espacio al aire libre con mesas y sombrillas para trabajar con buena climatología.",
+    "image": "https://placehold.co/600x400/7d9abf/ffffff?text=Terraza+Coworking"
+  }
+]

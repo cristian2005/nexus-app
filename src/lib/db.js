@@ -1,6 +1,8 @@
 import booksSeed from "@/data/books.json";
 import usersSeed from "@/data/users.json";
 import categoriesSeed from "@/data/categories.json";
+import spacesSeed from "@/data/spaces.json";
+import reservationsSeed from "@/data/reservations.json";
 
 // In-memory store. Resets on server restart, which is the expected behaviour
 // for a simulated API in this academic activity.
@@ -8,6 +10,8 @@ const store = {
   books: structuredClone(booksSeed),
   users: structuredClone(usersSeed),
   categories: structuredClone(categoriesSeed),
+  spaces: structuredClone(spacesSeed),
+  reservations: structuredClone(reservationsSeed),
 };
 
 export function listBooks({ category, year, type, q } = {}) {
@@ -67,4 +71,68 @@ export function purchase({ userId, bookIds }) {
     purchased.push(book);
   }
   return { ok: true, purchased };
+}
+
+// === Coworking Functions ===
+
+export function listSpaces() {
+  return store.spaces.map((space) => ({
+    ...space,
+    reservations: store.reservations.filter((r) => r.spaceId === space.id),
+  }));
+}
+
+export function getSpace(id) {
+  const space = store.spaces.find((s) => s.id === id);
+  if (!space) return null;
+  return {
+    ...space,
+    reservations: store.reservations.filter((r) => r.spaceId === id),
+  };
+}
+
+export function listReservationsByUser(userId) {
+  return store.reservations.filter((r) => r.userId === userId);
+}
+
+export function createReservation({ spaceId, userId, userName, startTime, endTime }) {
+  const space = store.spaces.find((s) => s.id === spaceId);
+  if (!space) {
+    return { ok: false, error: "Espacio no encontrado" };
+  }
+
+  const start = new Date(startTime);
+  const end = new Date(endTime);
+
+  if (start >= end) {
+    return { ok: false, error: "La hora de fin debe ser posterior a la de inicio" };
+  }
+
+  // Check for overlapping reservations
+  const overlapping = store.reservations.find((r) => {
+    if (r.spaceId !== spaceId) return false;
+    const rStart = new Date(r.startTime);
+    const rEnd = new Date(r.endTime);
+    return start < rEnd && end > rStart;
+  });
+
+  if (overlapping) {
+    return { ok: false, error: "El espacio ya está reservado en ese horario" };
+  }
+
+  const reservation = {
+    id: `r${Date.now()}`,
+    spaceId,
+    userId,
+    userName,
+    startTime: start.toISOString(),
+    endTime: end.toISOString(),
+  };
+
+  store.reservations.push(reservation);
+  return { ok: true, reservation };
+}
+
+export function getUserByEmail(email) {
+  return store.users.find((u) => u.email === email) ?? null;
 }

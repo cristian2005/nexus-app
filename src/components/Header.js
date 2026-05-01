@@ -1,8 +1,6 @@
 import Link from "next/link";
 
 // Server Component: solo renderiza enlaces, sin interaccion ni estado.
-// NOTA: los enlaces de /coworking, /coworking/mis-reservas y /login los
-// anadira la Persona B cuando implemente esa parte.
 export default function Header() {
   return (
     <header className="sticky top-0 z-30 border-b border-slate-800 bg-slate-950/90 backdrop-blur">
@@ -22,6 +20,15 @@ export default function Header() {
             href="/libreria/carrito"
           >
             Carrito
+          </Link>
+          <Link className="text-slate-300 hover:text-white" href="/coworking">
+            Coworking
+          </Link>
+          <Link className="text-slate-300 hover:text-white" href="/coworking/mis-reservas">
+            Mis reservas
+          </Link>
+          <Link className="text-slate-300 hover:text-white" href="/login">
+            Login
           </Link>
         </nav>
       </div>
