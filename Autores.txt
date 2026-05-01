@@ -1,0 +1,7 @@
+Autores de la Actividad 1 - Desarrollo Web con Frameworks Front-End
+
+1. Cristian Herrera Alcantara
+2. Winston Ayerline Jimenez Familia
+
+Master Universitario - UNIR
+Nexus DFR: Aplicacion Next.js con App Router
